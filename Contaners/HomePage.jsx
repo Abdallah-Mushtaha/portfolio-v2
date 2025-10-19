@@ -24,6 +24,7 @@ export default function HomePage() {
   useEffect(() => {
     AOS.init({
       duration: 800,
+      once: true,
     });
 
     const handleMouseMove = (e) => {
