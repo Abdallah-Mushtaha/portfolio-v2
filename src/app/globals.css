@@ -28,6 +28,7 @@ body {
   background: #f8f9fc !important;
   overflow-x: hidden !important;
   margin-top: -28px !important;
+  overflow-x: hidden !important;
 }
 
 .header {
