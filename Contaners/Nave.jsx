@@ -14,7 +14,7 @@ export default function Nave() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMoreOpen, setIsMoreOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("Home");
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
   const audioRef = useRef(null);
 
   const navLinks = [
@@ -197,6 +197,7 @@ export default function Nave() {
         autoPlay
         preload="auto"
         loop
+        muted={isMuted}
       />
     </header>
   );
