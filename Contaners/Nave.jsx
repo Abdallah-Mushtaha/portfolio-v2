@@ -189,7 +189,7 @@ export default function Nave() {
 
       <audio
         ref={audioRef}
-        src="/Sound/Smooth_Jazz.mp3"
+        src="/Sound/Jazz.mp3"
         autoPlay
         loop
         muted={isMuted}
