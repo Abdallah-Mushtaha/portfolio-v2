@@ -32,7 +32,7 @@ export const metadata = {
     title: "Abdallah Mushtaha | Frontend Developer",
     description:
       "Explore the portfolio of Abdallah Mushtaha, a frontend developer specializing in React and Next.js.",
-    url: "https://your-website-link.com", // Web-site linke dont forget 
+    url: "https://abdallahmushtaha.vercel.app/",
     siteName: "Abdallah Mushtaha",
     type: "website",
     images: [
@@ -68,7 +68,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></link>
-        <link rel="canonical" href="https://your-website-link.com" />
+        <link rel="canonical" href="https://abdallahmushtaha.vercel.app/" />
         <meta name="google-site-verification" content="Hm4A1vJm9eT5xdjEigYhD8d6vqu3yXVZqzKlOt1QAXw" />
       </head>
 
