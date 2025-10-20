@@ -120,11 +120,7 @@ export default function Nave() {
                 : "hover:bg-blue-500/10"
             }`}
           >
-            {isMuted ? (
-              <FaVolumeMute className="transition-transform duration-300 transform hover:scale-110" />
-            ) : (
-              <FaVolumeUp className="transition-transform duration-300 transform hover:scale-110" />
-            )}
+            {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
           </button>
 
           <div className="relative">
@@ -158,7 +154,6 @@ export default function Nave() {
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="md:hidden text-gray-300 focus:outline-none p-2 rounded-full hover:bg-blue-500/10 hover:text-black transition-all"
-          aria-label="Toggle menu"
         >
           <FaBars className="text-xl" />
         </button>
@@ -181,20 +176,17 @@ export default function Nave() {
           ))}
 
           <div className="flex flex-wrap justify-center gap-3 mt-2">
-            {socialLinks
-              .filter((s) => !s.desktop)
-              .map((social, index) => (
-                <a
-                  key={index}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="p-3 text-black hover:text-black hover:bg-blue-500/10 transition-colors text-lg rounded-lg"
-                  href={social.href}
-                  onClick={() => setIsMoreOpen(false)}
-                >
-                  {social.icon}
-                </a>
-              ))}
+            {socialLinks.map((social, index) => (
+              <a
+                key={index}
+                target="_blank"
+                rel="noreferrer"
+                className="p-3 text-black hover:text-black hover:bg-blue-500/10 transition-colors text-lg rounded-lg"
+                href={social.href}
+              >
+                {social.icon}
+              </a>
+            ))}
           </div>
         </div>
       )}
@@ -205,7 +197,6 @@ export default function Nave() {
         autoPlay
         preload="auto"
         loop
-        onCanPlay={() => audioRef.current.play()}
       />
     </header>
   );
