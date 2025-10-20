@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useRef, useEffect } from "react";
 import "../src/app/globals.css";
 import {
@@ -71,6 +73,12 @@ export default function Nave() {
     if (audioRef.current) {
       audioRef.current.muted = isMuted;
       audioRef.current.volume = 0.2;
+      if (!isMuted) {
+        const playPromise = audioRef.current.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {});
+        }
+      }
     }
   }, [isMuted]);
 
@@ -86,11 +94,7 @@ export default function Nave() {
             <button
               key={index}
               onClick={() => scrollToSection(link.key, link.href)}
-              className={`px-1.5 py-2 text-sm font-medium rounded-full transition-all duration-300 cursor-pointer ${
-                activeLink === link.key
-                  ? "text-gray-950 bg-blue-500/20"
-                  : "text-gray-950 hover:text-gray-950 hover:bg-blue-500/10"
-              }`}
+              className={`px-1.5 py-2 text-sm font-medium rounded-full transition-all duration-300 cursor-pointer ${activeLink === link.key ? "text-gray-950 bg-blue-500/20" : "text-gray-950 hover:text-gray-950 hover:bg-blue-500/10"}`}
             >
               {link.label}
             </button>
@@ -114,11 +118,7 @@ export default function Nave() {
 
           <button
             onClick={() => setIsMuted(!isMuted)}
-            className={`p-2 text-black transition-colors text-lg rounded-full flex items-center justify-center ${
-              isMuted
-                ? "bg-blue-500/10 hover:bg-blue-500/20"
-                : "hover:bg-blue-500/10"
-            }`}
+            className={`p-2 text-black transition-colors text-lg rounded-full flex items-center justify-center ${isMuted ? "bg-blue-500/10 hover:bg-blue-500/20" : "hover:bg-blue-500/10"}`}
           >
             {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
           </button>
@@ -165,11 +165,7 @@ export default function Nave() {
             <button
               key={index}
               onClick={() => scrollToSection(link.key, link.href)}
-              className={`w-full text-center px-4 py-2 text-sm font-medium rounded-lg transition ${
-                activeLink === link.key
-                  ? "text-gray-950 bg-blue-500/10"
-                  : "text-gray-950 hover:text-blue-500 hover:bg-blue-500/10"
-              }`}
+              className={`w-full text-center px-4 py-2 text-sm font-medium rounded-lg transition ${activeLink === link.key ? "text-gray-950 bg-blue-500/10" : "text-gray-950 hover:text-blue-500 hover:bg-blue-500/10"}`}
             >
               {link.label}
             </button>
@@ -195,9 +191,9 @@ export default function Nave() {
         ref={audioRef}
         src="/Sound/Smooth_Jazz.mp3"
         autoPlay
-        preload="auto"
         loop
         muted={isMuted}
+        preload="auto"
       />
     </header>
   );
