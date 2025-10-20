@@ -86,7 +86,7 @@ export default function Nave() {
             <button
               key={index}
               onClick={() => scrollToSection(link.key, link.href)}
-              className={`px-3 py-2 text-sm font-medium rounded-full transition-all duration-300 cursor-pointer ${
+              className={`px-1.5 py-2 text-sm font-medium rounded-full transition-all duration-300 cursor-pointer ${
                 activeLink === link.key
                   ? "text-gray-950 bg-blue-500/20"
                   : "text-gray-950 hover:text-gray-950 hover:bg-blue-500/10"
