@@ -69,6 +69,7 @@ export default function RootLayout({ children }) {
       <head>
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></link>
         <link rel="canonical" href="https://your-website-link.com" />
+        <meta name="google-site-verification" content="Hm4A1vJm9eT5xdjEigYhD8d6vqu3yXVZqzKlOt1QAXw" />
       </head>
 
       <body

@@ -64,7 +64,7 @@ export default function TechStack() {
                 {tech.tags.map((tag, idx) => (
                   <span
                     key={idx}
-                    className="bg-blue-100 text-blue-600 px-2 py-1 rounded-full text-sm"
+                    className="bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-sm"
                   >
                     {tag}
                   </span>

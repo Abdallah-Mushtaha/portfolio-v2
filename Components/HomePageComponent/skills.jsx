@@ -139,7 +139,7 @@ const Skills = () => {
                 {skill.skills.map((s, i) => (
                   <span
                     key={i}
-                    className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full flex items-center"
+                    className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full flex items-center"
                   >
                     {s}
                   </span>

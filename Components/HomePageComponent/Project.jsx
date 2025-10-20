@@ -96,7 +96,7 @@ const ProjectsSection = () => {
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 rounded-lg font-medium transition ${
+              className={`px-4 py-2 rounded-lg font-medium transition cursor-pointer ${
                 selectedCategory === cat
                   ? "bg-blue-600 text-white"
                   : "bg-gray-200 text-gray-700 hover:bg-blue-100 hover:text-blue-600"
@@ -138,7 +138,7 @@ const ProjectsSection = () => {
                         {project.tech?.map((tech, i) => (
                           <span
                             key={i}
-                            className="px-3 py-1 text-xs rounded-full bg-blue-100 text-blue-600"
+                            className="px-3 py-1 text-xs rounded-full bg-gray-100 text-gray-600"
                           >
                             {tech}
                           </span>
