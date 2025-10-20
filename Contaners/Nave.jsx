@@ -72,7 +72,7 @@ export default function Nave() {
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.muted = isMuted;
-      audioRef.current.volume = 0.2;
+      audioRef.current.volume = 0.05;
       if (!isMuted) {
         const playPromise = audioRef.current.play();
         if (playPromise !== undefined) {
